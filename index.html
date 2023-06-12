@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='style.css'>
+  <link rel='stylesheet' href='burger.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+  <title>Садик</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <!-- Дополнительные стили -->
+  <link rel="stylesheet" href="libs/animate/animate.css">
+  <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="libs/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+  <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+</head>
+
+
+<body>
+  <header>
+    <div class="contact-info con">
+      <div class="menu_burger container">
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <nav class="header-menu">
+          <ul class="header-menu__list">
+            <li><a href="#block2" class="header-menu__link">Услуги</a></li>
+            <li><a href="#block3" class="header-menu__link">О нас</a></li>
+            <li><a href="#block4" class="header-menu__link">Сотрудники</a></li>
+            <li><a href="#block1" class="header-menu__link">Акции</a></li>
+            <li><a href="#swiper-container" class="header-menu__link">Фото</a></li>
+            <li><a href="#block5" class="header-menu__link">Отзывы</a></li>
+            <li><a href="#form_quas" class="header-menu__link">Задать вопрос</a></li>
+            <li><a href="#footer" class="header-menu__link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <img id="specialButton" style="cursor:pointer;" src="https://lidrekon.ru/images/special.png"
+        alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+      <script>
+
+        $(document).ready(() => {
+          $(document).on('click', '.header__burger', () => {
+            $('.header__burger, .header-menu').toggleClass('active');
+            $('body').toggleClass('lock');
+          });
+          $(document).on('click', '.header-menu__list > li > a', e => {
+
+            /* Вот этот отрезок не обязателен! */
+            e.preventDefault();
+            let url = $(e.target).attr('href');
+            location.href = url;
+
+            $('.header__burger, .header-menu').removeClass('active');
+            $('body').removeClass('lock');
+          });
+        });
+      </script>
+    </div>
+    <div class="container">
+      <div class="logo_header" style="align-items: center;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="logo_main">
+            <a href="#"><img src="img/logo.png"></a>
+          </div>
+          <div class="logo">
+            <div class="logo_title0">Золотой ключик № 1</div>
+            <div class="logo_text0">Детский садик</div>
+          </div>
+        </div>
+        <div class="phone">
+          <span class="phone_icon"><ion-icon name="phone-portrait"></ion-icon>+1 (234) 567-89</span>
+          <button class="call-btn js-open-modal" data-modal="1">Заказать звонок</button>
+
+          <!-- Несколько модальных окон -->
+          <div class="modal" data-modal="1">
+            <!--   Svg иконка для закрытия окна  -->
+            <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <div class="modal__photo"><img src="img/36.png"></div>
+            <div class="modal__title"><b>Заказать звонок</b></div>
+            <div class="modal__title1">Введите данные для заказа обратного звонка</div>
+            <form class="form_modal">
+              <div class="form_type_model_text">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form_type_model_phone">
+                <span class="alert_text">*</span>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form_type_model_checkbox">
+                <label>
+                  <input type="checkbox" name="agree" required>
+                  <span class="alert_text">*</span>
+                  Я согласен на обработку моих <span class="alert_text"><u>персональных данных</u></span>
+                </label>
+              </div>
+              <button href="index.html" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <div class="overlay js-overlay-modal"></div>
+        <script src="js/modal.js"></script>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="block1" id="block1">
+    <div class="container">
+      <div class="menu">
+        <div class="left">
+          <div class="connect">
+            <div class="title_1">Идет набор детей в детский сад</div>
+            <div class="text_1">В группу с 1-го до 7 лет</div>
+          </div>
+          <div class="text_akz">До конца акции осталось:</div>
+          <div class="js_timer_item">
+            <div class="timer_item">
+              <div id="timer_item-day" class="timer_item-number">00</div>
+              <div class="timer_item-text">Дней</div>
+            </div>
+            <span class="timer_item">
+              <div id="timer_item-hours" class="timer_item-number">00</div>
+              <div class="timer_item-text">Часов</div>
+            </span>
+            <span class="timer_item">
+              <div id="timer_item-minutes" class="timer_item-number">00</div>
+              <div class="timer_item-text">Минут</div>
+            </span>
+            <span class="timer_item">
+              <div id="timer_item-seconds" class="timer_item-number">00</div>
+              <div class="timer_item-text">Секунд</div>
+            </span>
+          </div>
+          <div class="timer" id="countdown"></div>
+          <script>
+            // задаем дату окончания акции (год, месяц, день, час, минуты, секунды)
+
+            var countDownDate = new Date("2023-07-01T00:00:00").getTime();
+
+            // обновляем таймер каждую секунду
+            var x = setInterval(function () {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+
+              // вычисляем время в днях, часах, минутах и секундах
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              // выводим таймер на страницу
+              document.getElementById("timer_item-day").innerHTML = days < 10 ? "0" + days : days;
+              document.getElementById("timer_item-hours").innerHTML = hours < 10 ? "0" + hours : hours;
+              document.getElementById("timer_item-minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+              document.getElementById("timer_item-seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+
+              // останавливаем таймер, если время истекло
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Акция закончилась";
+              }
+            }, 1000);
+          </script>
+        </div>
+        <div class="right">
+          <form class="form">
+            <div class="form_type_text">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form_type_phone">
+              <span class="alert_text">*</span>
+              <label for="phone">Телефон:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form_type_checkbox">
+              <label>
+                <input type="checkbox" name="agree" required>
+                <span class="alert_text">*</span>
+                Я согласен на обработку моих <br>
+                <span class="alert_text"><u>персональных данных</u></span>
+              </label>
+            </div>
+            <button href="index.html" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block2" id="block2">
+    <div class="block_center">
+      <h1>Наш садик</h1>
+      <h2>Предлагаем Вашему вниманию наши услуги</h2>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/cart1.jpg" alt="Фотография садика 1">
+        <div class="card_text">Наше уютное помещение</div>
+        <p>Садик расположен в небольшом, уютном помещении. Еще на этапе проектирования, мы постарались сделать его
+          приятным и безопасным.</p>
+        <hr width="99%">
+        <button class="js-open-modal" data-modal="2">Оставить заявку</button>
+        <div class="modal" data-modal="2">
+          <!--   Svg иконка для закрытия окна  -->
+          <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+          </svg>
+          <div class="modal__photo"><img src="img/36.png"></div>
+          <div class="modal__title"><b>Оставить заявку</b></div>
+          <div class="modal__title1">Введите данные для заказа обратного звонка</div>
+          <form class="form_modal">
+            <div class="form_type_model_text">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form_type_model_phone">
+              <span class="alert_text">*</span>
+              <label for="phone">Телефон:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form_type_model_checkbox">
+              <label>
+                <input type="checkbox" name="agree" required>
+                <span class="alert_text">*</span>
+                Я согласен на обработку моих <span class="alert_text"><u>персональных данных</u></span>
+              </label>
+            </div>
+            <button type="submit" href="index.html">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/cart2.jpg" alt="Фотография садика 2">
+        <div class="card_text">Наша мягкая адаптация</div>
+        <p>Большое внимание в нашем детском саду уделяется вопросам адаптации. Успешная адаптация – это основа
+          комфортного пребывания ребенка в садике.</p>
+        <hr width="99%">
+        <button class="js-open-modal" data-modal="2">Оставить заявку</button>
+      </div>
+      <div class="card">
+        <img src="img/cart3.jpg" alt="Фотография садика 3">
+        <div class="card_text">Наше здоровое питание</div>
+        <p>В нашем детском садике работает собственная кухня. Мы делаем все, чтобы еда была полезной: готовим из
+          экологически чистых продуктов.</p>
+        <hr width="99%">
+        <button class="js-open-modal" data-modal="2">Оставить заявку</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- Start block3 -->
+  <div class="block3 container" id="block3">
+    <div class="block3_container">
+      <div class="block_title">Немного о детском саде</div>
+      <div class="block_text">
+        Наш детский садик - это не просто садик в привычном всем понимании.&nbsp;
+        <br>
+        <br>
+        Это многофункциональный центр развития Вашего ребенка.
+        <br>
+        Это лучший выбор для тех, кто хочет, чтобы его ребенок получил всесторонне развитие, заботу и познавательный
+        досуг.
+        <br>
+        Это выявление и развитие творческих способностей ребенка.
+      </div>
+    </div>
+    <div class="block3_photo">
+      <img src="img/34.jpg" alt="Фотография детского сада">
+    </div>
+  </div>
+  <!-- End block3 -->
+  <!-- Start block4 -->
+  <div class="block4" id="block4">
+    <div class="block_staff">
+      <h1>Наши сотрудники</h1>
+      <h2>Ниже представлены наши сотрудники</h2>
+    </div>
+    <div class="card-container1">
+      <div class="card1">
+        <img src="img/2 чел.png" alt="Фотография садика 1">
+        <div class="card_text">Кузнецова Ирина</div>
+        <div class="text_4">Руководитель физического воспитания</div>
+      </div>
+      <div class="card1">
+        <img src="img/layer_2.png" alt="Фотография садика 2">
+        <div class="card_text">Бажина Алесия</div>
+        <div class="text_4">Заведующая детским садом и центром раннего развития.</div>
+      </div>
+      <div class="card1">
+        <img src="img/3 чел.jpg" alt="Фотография садика 3">
+        <div class="card_text">Михайлова Лиля</div>
+        <div class="text_4">Методист</div>
+      </div>
+    </div>
+  </div>
+  <!-- End block4 -->
+
+  <!-- Start slider photo -->
+  <!-- Swiper -->
+  <div class="swiper-container" id="slider">
+    <div class="gallery_title"><b>Наши фотографии</b></div>
+    <div class="gallery_text">Ознакомьтесь с нашим детском садом</div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/gal1.jpg"></div>
+      <div class="swiper-slide"><img src="img/gal2.jpg"></div>
+      <div class="swiper-slide"><img src="img/gal3.jpg"></div>
+      <div class="swiper-slide"><img src="img/gal4.jpg"></div>
+      <div class="swiper-slide"><img src="img/gal5.jpg"></div>
+      <div class="swiper-slide"><img src="img/gal6.jpg"></div>
+    </div>
+    <!-- Add Pagination -->
+
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+  <!-- end  -->
+
+  <div class="block5" id="block5">
+    <div class="block5-overlay"></div>
+    <div id="testimonials">
+      <div class="container_block5">
+        <div class="block-one-example">
+          <div class="title7"><b>Отзывы наших клиентов</b></div>
+          <div id="customNav" class="owl-my-nav"></div>
+          <div class="owl-carousel block-items">
+            <div class="item">
+              <div class="inner-testimonial">
+                <img src="img/client2.png" class="full-opacity" alt="Клиент 1">
+                <h3 class="city-name">Лена Фасхиева</h3>
+                <p class="text-testimonial">Замечательнейший детский сад!!!! Домашняя обстановка!! Самые лучшие
+                  воспитатели!!! Заботливые,внимательные! Все детки как родные! У нас был опыт с другим садом,за 2 года
+                  так и не смогли привыкнуть… Здесь дочь привыкла спустя неделю! Да,после болезни и долгих выходных
+                  тяжело бывает,но воспитателям огромнейшее спасибо за терпение,старание! На пятничные блины хотели бы
+                  придти и взрослые!! </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inner-testimonial">
+                <img src="img/client2.png" class="full-opacity" alt="Клиент 2">
+                <h3 class="city-name">Ирина Тарасова</h3>
+                <p class="text-testimonial">Как же я рада, что отдала дочку в Ваш садик! Здесь у нее самый лучший
+                  воспитатель, о котором только можно мечтать – Романова Ольга Викторовна. У нее талант от Бога
+                  воспитывать детей, уж мне то можно верить – я мама троих детей!</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inner-testimonial">
+                <img src="img/client3.png" class="full-opacity" alt="Клиент 3">
+                <h3 class="city-name">Михаил Иванов</h3>
+                <p class="text-testimonial">Это первый садик для нашей Лизы.Мы ходили туда всего четыре месяца, но
+                  остались только хорошие впечатления. Ребенок каждое утро собиралась в сад с удовольствием, если мы
+                  даже оставались дома, она расстраивалась. Все дети чистые, накормлены. </p>
+              </div>
+            </div>
+          </div>
+        </div><!-- .block-one-example -->
+      </div>
+    </div>
+  </div>
+  <!-- Скрипты -->
+  <script src="libs/jquery/jquery-2.1.3.min.js"></script>
+  <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+
+
+  <div class="block_form" id="form_quas">
+    <div class="blocK_form_wrap">
+      <div class="blocK_form_inner container">
+        <div class="block_form_title_wrapper">
+          <div class="block_header_title_1">
+            <h1>Остались вопросы? Интересно?</h1>
+          </div>
+          <div class="block_header_text_1">
+            <p>Оставьте заявку, мы свяжемся с Ваши и ответим на интересующиеся вопросы</p>
+          </div>
+        </div>
+        <div class="block_form_button_wrapper">
+          <a href=""><button class="red-button js-open-modal" data-modal="3">Бесплатная консультация</button></a>
+          <div class="modal" data-modal="3">
+            <!--   Svg иконка для закрытия окна  -->
+            <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+            </svg>
+            <div class="modal__photo"><img src="img/36.png"></div>
+            <div class="modal__title"><b>Консультация</b></div>
+            <div class="modal__title1">Введите данные для заказа обратного звонка</div>
+            <form class="form_modal">
+              <div class="form_type_model_text">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form_type_model_phone">
+                <span class="alert_text">*</span>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+
+              <div class="form_type_model_checkbox">
+                <label>
+                  <input type="checkbox" name="agree" required>
+                  <span class="alert_text">*</span>
+                  Я согласен на обработку моих <span class="alert_text"><u>персональных данных</u></span>
+                </label>
+              </div>
+              <button type="submit" href="index.html">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer" id="footer">
+    <div class="footerbar container">
+      <div class="maps container">
+        <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4120bc9aa43f1945013e5189ca9e1c2a17ee324794468199154664c029cd885c&amp;width=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+      <div class="yandex">
+        <div class="footer-contact-info">
+          <span class="title_3">Контакты</span>
+          <p>Вы можете связаться с нами любым удобным способом или <br> заказать звонок</p>
+          <p><b>+7 (123) 123-45-67</b></p>
+          <p><b>+7 (123) 123-45-67</b></p>
+          <p>mail@example.com</p>
+          <p>example.com</p>
+          <p>г. Кызыл, ул. Бай-Хаакская улица, 2А, Россия</p>
+        </div>
+        <div class="soso">
+          <hr>
+        </div>
+        <div class="contact-form">
+          <span class="title_3">Заказать звонок</span>
+          <div class="text_3">Свяжемся с вами в ближайшее время</div>
+          <form>
+            <label for="name"><span class="alert_text">*</span>Имя</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone"><span class="alert_text">*</span>Телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="consent"><input type="checkbox" id="consent" name="consent" required><span
+                class="alert_text">*</span>Я согласен на обработку <span class="alert_text"><u>персональных
+                  данных</u></span></label>
+            <button href="index.html" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
