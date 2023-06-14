@@ -398,7 +398,7 @@ img {
   box-sizing: border-box;
   text-align: center;
   width: 550px;
-  height: 335px;
+  height: 395px;
   margin-top: 24px;
   padding: 24px 16px 16px;
   border-top-left-radius: 7px;
@@ -621,12 +621,29 @@ img {
   text-align: left;
   padding-bottom: 5px;
 }
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group textarea {
+  width: 87%;
+  display: block;
+  justify-content: left;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
 
 .form_type_checkbox {
   text-align: left;
   padding-bottom: 30px;
   font-size: 14px;
-
 }
 
 .form label {
@@ -638,20 +655,21 @@ img {
   text-decoration: none;
   line-height: 100%;
   font-family: Fira Sans, sans-serif;
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 8px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
 }
 
 .alert_text {
   color: #ff0000;
 }
-
+.form textarea[type="story"]{
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: 1.5;
+}
 .form input[type="text"],
 .form input[type="tel"] {
   display: block;
@@ -914,6 +932,7 @@ img {
   max-width: 960px;
   width: 90%;
   margin: 0 auto;
+  position: relative;
 }
 
 .title7 {
@@ -1407,7 +1426,13 @@ a {
   .logo_title0 {
     font-size: 16px;
   }
-
+  
+  .container_block5 {
+    max-width: 760px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
   .logo_text0 {
     font-size: 16px;
   }
